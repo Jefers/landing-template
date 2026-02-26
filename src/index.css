@@ -2,6 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --primary: #2E4036;      /* Moss */
+  --accent: #CC5833;        /* Clay */
+  --bg: #F2F0E9;            /* Cream */
+  --slate: #1A1A1A;         /* Charcoal */
+}
+
+body {
+  @apply bg-[var(--primary)] text-[var(--bg)];
+  font-family: 'Plus Jakarta Sans', 'Outfit', system-ui, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Plus Jakarta Sans', 'Outfit', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+.drama {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+}
+
+.mono {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
 /* Global subtle noise overlay */
 .noise {
   position: fixed;
@@ -10,4 +37,13 @@
   background: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
   z-index: 9999;
   mix-blend-mode: overlay;
+}
+
+/* Rounded radius system */
+.rounded-system {
+  @apply rounded-[2.5rem];
+}
+
+.rounded-large {
+  @apply rounded-[3.5rem];
 }
